@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TESTING SPINNAKER</title>
+  <meta name="description" content="TESTING SPINNAKER">
+  <meta name="author" content="SitePoint">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <h1>HOWAYA!!</h1>
+  <p>VERSION: </p>
+  <p id='version'></p>
+  <p>VERSION2: </p>
+  <p id='version2'></p>
+
+  <script type="text/javascript">
+      var read = new XMLHttpRequest();
+      read.open('GET', 'VERSION', false);
+      read.send();
+      var version = read.responseText
+      document.getElementById("version").innerHTML = version;
+      var read2 = new XMLHttpRequest();
+      read2.open('GET', 'VERSION', false);
+      read2.send();
+      var version2 = read2.responseText
+      document.getElementById("version2").innerHTML = version2;
+ </script>
+</body>
+</html>
